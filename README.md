@@ -12,6 +12,6 @@ devtools::install_github("JinmiaoChenLab/Rphenograph")
 ```
 devtools::install_github("WangLab-SINH/CYANO")
 ```
-## Vignettes
+## Tutorials
 
-Tutorials will be coming soon
+Tutorials can be seen at http://39.100.73.118/Tutorial.html
