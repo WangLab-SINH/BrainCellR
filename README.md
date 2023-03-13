@@ -5,7 +5,7 @@
 
 `CYANO` has a dependencie from Github:
 ```
-devtools::install_github("JinmiaoChenLab/Rphenograph")
+devtools::install_github("AllenInstitute/scrattch.hicat")
 ```
 
 `CYNAO` can be installed with:
