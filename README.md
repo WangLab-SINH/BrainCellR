@@ -3,7 +3,7 @@
 
 ## Installation
 
-`CYANO` has a dependencie from Github::
+`CYANO` has a dependencie from Github:
 ```
 devtools::install_github("JinmiaoChenLab/Rphenograph")
 ```
