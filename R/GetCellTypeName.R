@@ -22,7 +22,7 @@ GetCellTypeName <- function(input_data, cell_type_file, all_marker_list){
   data_meta = cell_type_file
 
   cl = data_meta$cluster_label
-  names(cl) = rownames(mouse_data@meta.data)
+  names(cl) = rownames(data_meta)
   rm_cluster = names(table(cl))[table(cl)<2]
   data_meta = data_meta[!data_meta$cluster_label %in% rm_cluster,]
   input_data = input_data[,rownames(data_meta)]
