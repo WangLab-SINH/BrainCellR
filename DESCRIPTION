@@ -1,0 +1,19 @@
+Package: CYANO
+Type: Package
+Title: Cluter and annotation cell types
+Version: 0.1.0
+Author: Yuhao Chi
+Maintainer: Yuhao Chi <guangchuangyu@gmail.com>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: MIT
+Depends:
+    R (>= 3.6.0)
+Imports:
+    Matrix (>= 1.3.3),
+    Seurat,
+    scrattch.hicat,
+    WGCNA
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
