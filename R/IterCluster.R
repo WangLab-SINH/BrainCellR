@@ -10,7 +10,7 @@
 #' @param method meta input
 #' @param de.param The differential gene expression threshold.
 #' @param merge.type Determine if the DE gene score threshold should be applied to combined de.score, or de.score for up and down directions separately.
-#' @return A numeric vector of log density.
+#' @return Cluster result.
 #' @import scrattch.hicat
 #' @export
 IterCluster <- function (norm.dat, select.cells = colnames(norm.dat), prefix = NULL, k.nn, max.dim, de.param = de_param(), merge.type = c("undirectional",

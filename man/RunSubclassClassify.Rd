@@ -4,21 +4,20 @@
 \alias{RunSubclassClassify}
 \title{Classify class and subclass}
 \usage{
-RunSubclassClassify(new_data, ref_data, ref_meta)
+RunSubclassClassify(new_data, group_meta, ref_data, ref_meta)
 }
 \arguments{
-\item{new_data}{data input}
+\item{new_data}{Data input, single cell expression data.}
 
-\item{ref_data}{data ref}
+\item{group_meta}{meta input}
 
-\item{ref_meta}{meta input}
+\item{ref_data}{Reference expression data for classication.}
+
+\item{ref_meta}{Reference metadata, must include column name with class_label and subclass_label.}
 }
 \value{
-A numeric vector of log density.
+A dataframe with annotation of cell type major class and subclass.
 }
 \description{
-Creating poisson vector.
-}
-\details{
-Input an integer and return the log density of a poisson distribution with lambda equals the input integer
+Classify class and subclass.
 }

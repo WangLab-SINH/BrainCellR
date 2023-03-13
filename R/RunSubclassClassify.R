@@ -1,11 +1,10 @@
 #' @title Classify class and subclass
-#' @description  Creating poisson vector.
-#' @details Input an integer and return the log density of a poisson distribution with lambda equals the input integer
-#' @param new_data data input
-#' @param ref_data data ref
-#' @param ref_meta meta input
+#' @description  Classify class and subclass.
+#' @param new_data Data input, single cell expression data.
 #' @param group_meta meta input
-#' @return A numeric vector of log density.
+#' @param ref_data Reference expression data for classication.
+#' @param ref_meta Reference metadata, must include column name with class_label and subclass_label.
+#' @return A dataframe with annotation of cell type major class and subclass.
 #' @export
 #' @import Seurat
 

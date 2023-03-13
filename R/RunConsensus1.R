@@ -1,5 +1,5 @@
 #' @title Run consensus1
-#' @description  Using consensus1 method to clust single cell data
+#' @description  Using consensus1 method to clust single cell data.
 #' @param norm.dat Single cell expression data input.
 #' @param select.cells Numeric, use all or part of the cells for clustering, cells can be sampled to save running time in multi-round clustering. Using all cells by default.
 #' @param k.nn K-nearst neighbors used for clustering. Default 15.
@@ -9,8 +9,8 @@
 #' @param de.param The differential gene expression threshold.
 #' @param merge.type Determine if the DE gene score threshold should be applied to combined de.score, or de.score for up and down directions separately.
 #' @param cut.method Clustering method. It can be "auto", "louvain", "hclust".
-#' @param override Clustering method. It can be "auto", "louvain", "hclust".
-#' @param init.result Clustering method. It can be "auto", "louvain", "hclust".
+#' @param override Whether the file should be overrided.
+#' @param init.result If set, the function will only find finer splits of the current clusters.
 #' @param ... Other parameters.
 #' @return A list with two elements: cl: cluster membership for each cell markers: top markers that seperate clusters
 #' @export

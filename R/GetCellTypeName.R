@@ -1,10 +1,9 @@
-#' @title Get cell type name
-#' @description  Creating poisson vector.
-#' @details Input an integer and return the log density of a poisson distribution with lambda equals the input integer
-#' @param input_data data input
-#' @param cell_type_file meta input
-#' @param all_marker_list de gene input
-#' @return A numeric vector of log density.
+#' @title Get cell type name with annotation of major class, subclass and top 3 markers
+#' @description  Get cell type name with annotation of major class, subclass and top 3 markers.
+#' @param input_data Data input, single cell expression matrix or pseudo cell matrix.
+#' @param cell_type_file Annotation of cell type from previously RunFindDEGene method.
+#' @param all_marker_list De gene file from RunFindDEGene.
+#' @return A dataframe contains annotation of cell type name
 #' @export
 GetCellTypeName <- function(input_data, cell_type_file, all_marker_list){
   # cell_type_file = read.csv(cell_type_file,row.names=1)

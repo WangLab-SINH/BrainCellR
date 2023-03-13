@@ -2,23 +2,20 @@
 % Please edit documentation in R/GetCellTypeName.R
 \name{GetCellTypeName}
 \alias{GetCellTypeName}
-\title{Get cell type name}
+\title{Get cell type name with annotation of major class, subclass and top 3 markers}
 \usage{
 GetCellTypeName(input_data, cell_type_file, all_marker_list)
 }
 \arguments{
-\item{input_data}{data input}
+\item{input_data}{Data input, single cell expression matrix or pseudo cell matrix.}
 
-\item{cell_type_file}{meta input}
+\item{cell_type_file}{Annotation of cell type from previously RunFindDEGene method.}
 
-\item{all_marker_list}{de gene input}
+\item{all_marker_list}{De gene file from RunFindDEGene.}
 }
 \value{
-A numeric vector of log density.
+A dataframe contains annotation of cell type name
 }
 \description{
-Creating poisson vector.
-}
-\details{
-Input an integer and return the log density of a poisson distribution with lambda equals the input integer
+Get cell type name with annotation of major class, subclass and top 3 markers.
 }

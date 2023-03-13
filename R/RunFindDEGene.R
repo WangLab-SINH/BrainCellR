@@ -1,9 +1,8 @@
 #' @title Find differential expressed gene
-#' @description  Creating poisson vector.
-#' @details Input an integer and return the log density of a poisson distribution with lambda equals the input integer
-#' @param new_data data input
-#' @param data_meta meta input
-#' @return A numeric vector of log density.
+#' @description  Find differential expressed gene.
+#' @param new_data Data input, single cell expression matrix.
+#' @param data_meta Cell type classification result from RunSubclassClassify.
+#' @return A list with three files contains DE gene reuslt.
 #' @export
 #' @import Seurat
 RunFindDEGene <- function(new_data, data_meta)

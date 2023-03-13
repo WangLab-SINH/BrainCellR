@@ -39,7 +39,7 @@ IterCluster(
 \item{method}{meta input}
 }
 \value{
-A numeric vector of log density.
+Cluster result.
 }
 \description{
 Iterative clustering algorithm for single cell RNAseq dataset.

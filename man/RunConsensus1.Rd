@@ -36,9 +36,9 @@ RunConsensus1(
 
 \item{merge.type}{Determine if the DE gene score threshold should be applied to combined de.score, or de.score for up and down directions separately.}
 
-\item{override}{Clustering method. It can be "auto", "louvain", "hclust".}
+\item{override}{Whether the file should be overrided.}
 
-\item{init.result}{Clustering method. It can be "auto", "louvain", "hclust".}
+\item{init.result}{If set, the function will only find finer splits of the current clusters.}
 
 \item{cut.method}{Clustering method. It can be "auto", "louvain", "hclust".}
 
@@ -48,5 +48,5 @@ RunConsensus1(
 A list with two elements: cl: cluster membership for each cell markers: top markers that seperate clusters
 }
 \description{
-Using consensus1 method to clust single cell data
+Using consensus1 method to clust single cell data.
 }

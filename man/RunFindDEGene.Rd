@@ -7,16 +7,13 @@
 RunFindDEGene(new_data, data_meta)
 }
 \arguments{
-\item{new_data}{data input}
+\item{new_data}{Data input, single cell expression matrix.}
 
-\item{data_meta}{meta input}
+\item{data_meta}{Cell type classification result from RunSubclassClassify.}
 }
 \value{
-A numeric vector of log density.
+A list with three files contains DE gene reuslt.
 }
 \description{
-Creating poisson vector.
-}
-\details{
-Input an integer and return the log density of a poisson distribution with lambda equals the input integer
+Find differential expressed gene.
 }
