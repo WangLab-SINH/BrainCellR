@@ -2,10 +2,11 @@
 #' @description  Find differential expressed gene.
 #' @param new_data Data input, single cell expression matrix.
 #' @param data_meta Cell type classification result from RunSubclassClassify.
+#' @param cell_number Cell type classification result from RunSubclassClassify.
 #' @return A list with three files contains DE gene reuslt.
 #' @export
 #' @import Seurat
-RunFindDEGene <- function(new_data, data_meta)
+RunFindDEGene <- function(new_data, data_meta, cell_number=10)
 {
   # data = read.csv(paste0(file_path_root, "data.csv"), row.names=1)
   # new_meta1 = read.csv(paste0(file_path_root, "new_meta1.csv"),row.names=1)
@@ -61,17 +62,17 @@ RunFindDEGene <- function(new_data, data_meta)
     temp <- current_sample_data[current_sample_meta$cluster_label==type_list[i],]
     index_id <- 1:nrow(temp)
     index_id <- sample(index_id, length(index_id))
-    for(j in 1:ceiling(length(index_id)/10)){
+    for(j in 1:ceiling(length(index_id)/cell_number)){
       new_meta_data <- c(new_meta_data, type_list[i])
-      if(j*10 > length(index_id)){
-        if(((j-1)*10+1)==length(index_id)){
-          new_sample_data <- rbind(new_sample_data, as.numeric(temp[index_id[(1+(j-1)*10):length(index_id)],]))
+      if(j*cell_number > length(index_id)){
+        if(((j-1)*cell_number+1)==length(index_id)){
+          new_sample_data <- rbind(new_sample_data, as.numeric(temp[index_id[(1+(j-1)*cell_number):length(index_id)],]))
         }else{
-          new_sample_data <- rbind(new_sample_data, colMeans(temp[index_id[(1+(j-1)*10):length(index_id)],]))
+          new_sample_data <- rbind(new_sample_data, colMeans(temp[index_id[(1+(j-1)*cell_number):length(index_id)],]))
         }
 
       }else{
-        new_sample_data <- rbind(new_sample_data, colMeans(temp[index_id[(1+(j-1)*10):(j*10)],]))
+        new_sample_data <- rbind(new_sample_data, colMeans(temp[index_id[(1+(j-1)*cell_number):(j*cell_number)],]))
       }
     }
   }
