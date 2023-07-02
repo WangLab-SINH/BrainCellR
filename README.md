@@ -1,16 +1,16 @@
-# CYANO: Cell Type Classification and Nomination for the Brain
+# BrainCellR: A Precise Cell Type Nomenclature R Package for Comparative Analysis Across Brain Single-Cell Datasets  
 
 
 ## Installation
 
-`CYANO` has a dependencie from Github:
+`BrainCellR` has a dependencie from Github:
 ```
 devtools::install_github("AllenInstitute/scrattch.hicat")
 ```
 
-`CYNAO` can be installed with:
+`BrainCellR` can be installed with:
 ```
-devtools::install_github("WangLab-SINH/CYANO")
+devtools::install_github("WangLab-SINH/BrainCellR")
 ```
 ## Tutorials
 
