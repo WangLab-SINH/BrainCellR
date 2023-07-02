@@ -1,4 +1,11 @@
-RunFindDEGeneExtend <- function(anno, new_sample_data, new_meta)
+#' @title Get cell type name which can not find by ROC method
+#' @description  Get cell type name which can not find by ROC method.
+#' @param anno Data anno.
+#' @param new_sample_data Pse data.
+#' @param new_meta Pse meta.
+#' @return A dataframe contains annotation of cell type name
+#' @export
+GetCellTYpeNameExtend <- function(anno, new_sample_data, new_meta)
 {
   mouse_data <- CreateSeuratObject(counts = new_sample_data, min.cells = 0, min.features = 0, project = "example")
   mouse_data <- AddMetaData(mouse_data, new_meta)
