@@ -4,12 +4,14 @@
 \alias{RunFindDEGene}
 \title{Find differential expressed gene}
 \usage{
-RunFindDEGene(new_data, data_meta)
+RunFindDEGene(new_data, data_meta, cell_number = 10)
 }
 \arguments{
 \item{new_data}{Data input, single cell expression matrix.}
 
 \item{data_meta}{Cell type classification result from RunSubclassClassify.}
+
+\item{cell_number}{Cell type classification result from RunSubclassClassify.}
 }
 \value{
 A list with three files contains DE gene reuslt.
