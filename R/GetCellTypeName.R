@@ -6,18 +6,14 @@
 #' @return A dataframe contains annotation of cell type name
 #' @export
 GetCellTypeName <- function(input_data, cell_type_file, all_marker_list){
-  # cell_type_file = read.csv(cell_type_file,row.names=1)
-  # all_marker_list = readRDS(all_marker_list)
+
   total_all_marker_list = all_marker_list[[1]][1,]
   for(i in 1:length(all_marker_list)){
     total_all_marker_list = rbind(total_all_marker_list, all_marker_list[[i]])
   }
   total_all_marker_list = total_all_marker_list[-1,]
   print(length(unique(total_all_marker_list$cluster)))
-  # result_file_name = "G:/PFC/mouse_M1/de_gene_consensus_1_2_t_subclass.csv"
-  # result_file_name1 = "G:/PFC/mouse_M1/de_gene_consensus_1_2_t_subclass_old.csv"
-  # result_file_name2 = "G:/PFC/mouse_M1/de_gene_consensus_1_2_t_subclass_raw.csv"
-  # result_score_file_name = "G:/PFC/mouse_M1/scoreconsensus_1_2_t_subclass.csv"
+
   data_meta = cell_type_file
 
   cl = data_meta$cluster_label
@@ -69,11 +65,7 @@ GetCellTypeName <- function(input_data, cell_type_file, all_marker_list){
             for(l in 1:nrow(temp_current_marker_list_temp)){
               g = temp_current_marker_list_temp[l,"gene"]
               temp_medianExpr = medianExpr[,temp_cluster]
-              # median_sec_median_score = max(temp_medianExpr[g,colnames(temp_medianExpr)!=j]) / temp_medianExpr[g,j]
-              # if(median_sec_median_score == Inf){
-              #   median_sec_median_score = 1
-              # }
-              # median_sec_median_score = 1 - median_sec_median_score
+
 
               temp_score = 0
               other_temp_cluster = temp_cluster[temp_cluster!=j]
@@ -216,7 +208,6 @@ GetCellTypeName <- function(input_data, cell_type_file, all_marker_list){
     temp_name = paste0(paste0(paste0(paste0(data_meta_final[k,"class"],"_"),data_meta_final[k,"subclass"]),"_"),data_meta_final[k,"gene1"])
     data_meta_final[k,"cluster_new"] = temp_name
   }
-  # write.csv(data_meta_final, result_file_name)
   return(data_meta_final)
 
 

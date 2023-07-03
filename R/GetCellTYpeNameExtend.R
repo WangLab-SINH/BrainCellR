@@ -87,15 +87,11 @@ GetCellTYpeNameExtend <- function(anno, new_sample_data, new_meta)
 
 
 GetCellTypeNameExtend <- function(current_anno, current_subclass, input_data, cell_type_file, all_marker_list){
-  # cell_type_file = read.csv(cell_type_file,row.names=1)
-  # all_marker_list = readRDS(all_marker_list)
+
   total_all_marker_list = all_marker_list
 
   print(length(unique(total_all_marker_list$cluster)))
-  # result_file_name = "G:/PFC/mouse_M1/de_gene_consensus_1_2_t_subclass.csv"
-  # result_file_name1 = "G:/PFC/mouse_M1/de_gene_consensus_1_2_t_subclass_old.csv"
-  # result_file_name2 = "G:/PFC/mouse_M1/de_gene_consensus_1_2_t_subclass_raw.csv"
-  # result_score_file_name = "G:/PFC/mouse_M1/scoreconsensus_1_2_t_subclass.csv"
+
   data_meta = cell_type_file
   
   cl = data_meta$cluster_label

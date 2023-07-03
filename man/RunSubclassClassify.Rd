@@ -4,7 +4,13 @@
 \alias{RunSubclassClassify}
 \title{Classify class and subclass}
 \usage{
-RunSubclassClassify(new_data, group_meta, ref_data, ref_meta)
+RunSubclassClassify(
+  new_data,
+  group_meta,
+  ref_data,
+  ref_meta,
+  method = "Seurat"
+)
 }
 \arguments{
 \item{new_data}{Data input, single cell expression data.}
@@ -14,6 +20,8 @@ RunSubclassClassify(new_data, group_meta, ref_data, ref_meta)
 \item{ref_data}{Reference expression data for classication.}
 
 \item{ref_meta}{Reference metadata, must include column name with class_label and subclass_label.}
+
+\item{method}{Method to run classification, can be choosen from Seurat or SingleR. Default is Seurat.}
 }
 \value{
 A dataframe with annotation of cell type major class and subclass.

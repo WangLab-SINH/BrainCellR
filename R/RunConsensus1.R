@@ -63,30 +63,4 @@ RunConsensus1 <- function (norm.dat, select.cells = colnames(norm.dat), k.nn=15,
                                            "result.*.rda"))
   load(result.files)
   return(result)
-
-  # cl.size = table(co.result$cl.list[[1]])
-  # graph.size = sum(cl.size^2)
-  # if (graph.size < 10^9) {
-  #   consensus.result = iter_consensus_clust(cl.list = co.result$cl.list,
-  #                                           cl.mat = co.result$cl.mat, norm.dat = norm.dat,
-  #                                           select.cells = all.cells, de.param = de.param, merge.type = merge.type,
-  #                                           method = cut.method, result = init.result,max.cl.size = 500)
-  #   refine.result = refine_cl(consensus.result$cl, cl.mat = co.result$cl.mat,
-  #                             tol.th = 0.01, confusion.th = confusion.th, min.cells = de.param$min.cells)
-  #   markers = consensus.result$markers
-  # }
-  # else {
-  #   result <- iter_clust1(norm.dat = norm.dat,
-  #                                        select.cells = all.cells, de.param = de.param, merge.type = merge.type,
-  #                                        result = init.result, ...)
-  #   cl = merge_cl_by_co(result$cl, co.ratio = NULL, cl.mat = co.result$cl.mat,
-  #                       diff.th = 0.25)
-  #   refine.result = refine_cl(cl, cl.mat = co.result$cl.mat,
-  #                             tol.th = 0.01, confusion.th = 0.6, min.cells = de.param$min.cells)
-  #   markers = result$markers
-  # }
-  # cl = refine.result$cl
-  # merge.result = merge_cl(norm.dat = norm.dat, cl = cl, rd.dat.t = norm.dat[markers,
-  #                                                                           ], de.param = de.param, merge.type = merge.type, return.markers = FALSE)
-  # return(list(co.result = co.result, cl.result = merge.result))
 }
