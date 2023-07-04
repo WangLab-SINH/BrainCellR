@@ -76,6 +76,11 @@ RunFindDEGene <- function(new_data, data_meta, cell_number=10)
 
   rownames(new_meta) = new_meta$cell
   new_meta$class = new_meta$subclass_label
+  class_subclass_ref = unique(data.frame(data_meta$subclass_label, data_meta$class_label))
+  colnames(class_subclass_ref) <- c("subclass","class")
+  rownames(class_subclass_ref) <- class_subclass_ref$subclass
+  new_meta$class = class_subclass_ref[new_meta$subclass_label, "class"]
+
 
   new_pse_data <- new_sample_data
 

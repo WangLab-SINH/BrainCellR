@@ -181,8 +181,8 @@ GetCellTypeName <- function(input_data, cell_type_file, all_marker_list){
   binary_gene = data.frame(0,0,0,0,0)
   score_list = c()
   for(i in unique(binary_data_frame$X0)){
-    temp = binary_data_frame[binary_data_frame$X0==i,]
-    binary_gene = rbind(binary_gene, temp$X0.2[1:5])
+    temp = unique(binary_data_frame[binary_data_frame$X0==i,])
+    binary_gene = rbind(binary_gene, temp$X0.2[1:3])
     score_list = c(score_list, temp$X0.1[1])
   }
   binary_gene = binary_gene[-1,]
@@ -191,18 +191,18 @@ GetCellTypeName <- function(input_data, cell_type_file, all_marker_list){
   data_meta_cluster_level = unique(data.frame(data_meta$class,data_meta$subclass_label,data_meta$cluster_label))
   rownames(data_meta_cluster_level) = data_meta_cluster_level$data_meta.cluster_label
   colnames(data_meta_cluster_level) = c("class","subclass","group")
-  data_meta_final = data.frame(0,0,0,0,0,0,0,0)
+  data_meta_final = data.frame(0,0,0,0,0,0)
   for(i in 1:nrow(data_meta_cluster_level)){
     if(rownames(data_meta_cluster_level)[i] %in% rownames(binary_gene)){
       temp = c(as.character(data_meta_cluster_level[i,]), as.character(binary_gene[rownames(data_meta_cluster_level)[i],]))
     }else{
-      temp = c(as.character(data_meta_cluster_level[i,]), NA,NA,NA,NA,NA)
+      temp = c(as.character(data_meta_cluster_level[i,]), NA,NA,NA)
     }
     data_meta_final = rbind(data_meta_final, temp)
   }
   data_meta_final = data_meta_final[-1,]
 
-  colnames(data_meta_final) = c("class","subclass","cluster","gene1","gene2","gene3","gene4","gene5")
+  colnames(data_meta_final) = c("class","subclass","cluster","gene1","gene2","gene3")
   data_meta_final$cluster_new = data_meta_final$cluster
   for(k in 1:nrow(data_meta_final)){
     temp_name = paste0(paste0(paste0(paste0(data_meta_final[k,"class"],"_"),data_meta_final[k,"subclass"]),"_"),data_meta_final[k,"gene1"])
