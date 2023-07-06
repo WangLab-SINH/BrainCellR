@@ -28,4 +28,4 @@ devtools::install_github("WangLab-SINH/BrainCellR")
 ```
 ## Tutorials
 
-Tutorials can be seen at https://wanglab-sinh.github.io/<br>
+Tutorials can be seen at https://wanglab-sinh.github.io/braincellr/<br>
