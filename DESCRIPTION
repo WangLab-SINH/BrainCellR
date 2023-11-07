@@ -1,12 +1,11 @@
 Package: BrainCellR
 Type: Package
-Title: Cluter and annotation cell types
+Title: A Precise Cell Type Nomenclature R Package for Comparative Analysis Across Brain Single-Cell Datasets
 Version: 0.1.0
 Author: Yuhao Chi
-Maintainer: Yuhao Chi <guangchuangyu@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: MIT
+Maintainer: Yuhao Chi <chiyuhao2018@sibs.ac.cn>
+Description: A Precise Cell Type Nomenclature R Package for Comparative Analysis Across Brain Single-Cell Datasets.
+License: MIT + file LICENSE
 Depends:
     R (>= 3.6.0)
 Imports:
@@ -14,7 +13,10 @@ Imports:
     Seurat,
     scrattch.hicat,
     WGCNA,
-    SingleR
+    SingleR,
+    doParallel,
+    foreach,
+    matrixStats
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2

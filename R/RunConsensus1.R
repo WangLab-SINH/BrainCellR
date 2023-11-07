@@ -15,6 +15,8 @@
 #' @return A list with two elements: cl: cluster membership for each cell markers: top markers that seperate clusters
 #' @export
 #' @import scrattch.hicat
+#' @import foreach
+#' @import doParallel
 RunConsensus1 <- function (norm.dat, select.cells = colnames(norm.dat), k.nn=15, max.dim=20,
                            output_dir = "subsample_result",
                            mc.cores = 1, de.param = de_param(), merge.type = c("undirectional",
@@ -52,8 +54,6 @@ RunConsensus1 <- function (norm.dat, select.cells = colnames(norm.dat), k.nn=15,
     })
   }
   else {
-    require(foreach)
-    require(doParallel)
     cl <- makeForkCluster(mc.cores)
     registerDoParallel(cl)
     foreach(i = 1:niter, .combine = "c") %dopar% run(i)

@@ -153,7 +153,7 @@ RunSubclassClassify <- function(new_data, group_meta, ref_data, ref_meta,method=
     query_count <- new_data
 
     predictions <- SingleR(test=query_count, assay.type.test=1,
-                           ref=train_data, labels=reference_meta$subclass_label)
+                           ref=reference_count, labels=reference_meta$subclass_label)
 
 
 
@@ -184,7 +184,7 @@ RunSubclassClassify <- function(new_data, group_meta, ref_data, ref_meta,method=
       #load query
       query_count <- new_data[,predict_meta$class_label==i]
       predictions <- SingleR(test=query_count, assay.type.test=1,
-                             ref=train_data, labels=reference_meta$subclass_label)
+                             ref=reference_count, labels=reference_meta$subclass_label)
 
 
       predict_meta1 = data.frame(rownames(predictions), predictions$labels)

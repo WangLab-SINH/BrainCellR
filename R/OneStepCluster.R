@@ -24,6 +24,7 @@
 #' @export
 #' @import WGCNA
 #' @import scrattch.hicat
+#' @import matrixStats
 OneStepCluster <- function (norm.dat, select.cells = colnames(norm.dat), counts = NULL,
                             method = c("louvain", "leiden", "ward.D", "kmeans"), vg.padj.th = 0.5,
                             dim.method = c("pca", "WGCNA"), max.dim = 20, rm.eigen = NULL,
@@ -32,7 +33,6 @@ OneStepCluster <- function (norm.dat, select.cells = colnames(norm.dat), counts 
                             max.cl.size = 500, k.nn = 50, prefix = NULL, verbose = FALSE,
                             regress.x = NULL)
 {
-  library(matrixStats)
   method <- match.arg(method)
   dim.method <- match.arg(dim.method)
   merge.type <- match.arg(merge.type)
