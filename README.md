@@ -21,6 +21,7 @@
 ```
 devtools::install_github("AllenInstitute/scrattch.hicat")
 ```
+Also, WGCNA and SingleR
 
 `BrainCellR` can be installed with:
 ```
