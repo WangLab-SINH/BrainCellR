@@ -31,3 +31,5 @@ devtools::install_github("WangLab-SINH/BrainCellR")
 
 Tutorials can be seen at https://wanglab-sinh.github.io/braincellr<br>
 Data used in tutorial can be downloaded from https://github.com/WangLab-SINH/WangLab-SINH.github.io
+
+You can contact chiyuhao2018@sibs.ac.cn for any questions.
