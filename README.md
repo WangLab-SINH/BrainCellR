@@ -32,4 +32,6 @@ devtools::install_github("WangLab-SINH/BrainCellR")
 Tutorials can be seen at https://wanglab-sinh.github.io/braincellr<br>
 Data used in tutorial can be downloaded from https://github.com/WangLab-SINH/WangLab-SINH.github.io
 
+Reference data for cell type class and subclass classification can be obtained from https://drive.google.com/drive/folders/1q9JT0JFhBvc6CvkbzZVXmEANXfgQ8VID?usp=sharing
+
 You can contact chiyuhao2018@sinh.ac.cn for any questions.
