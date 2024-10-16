@@ -21,7 +21,7 @@
 ```
 devtools::install_github("AllenInstitute/scrattch.hicat")
 ```
-Also, WGCNA and SingleR
+Also, Seurat, WGCNA, SingleR, doParallel, foreach, matrixStats, impute, preprocessCore.
 
 `BrainCellR` can be installed with:
 ```
